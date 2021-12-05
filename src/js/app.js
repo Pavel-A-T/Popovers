@@ -1,5 +1,4 @@
 export default class App {
-
   doPopup() {
     const popup = document.getElementsByClassName('popup');
     if (popup[0].classList.contains('show')) popup[0].classList.remove('show');
@@ -13,7 +12,6 @@ export default class App {
       this.doPopup();
     }));
   }
-
 }
 
 const app = new App();

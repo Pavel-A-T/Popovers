@@ -3,16 +3,8 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-  target: 'web',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/',
-  },
-  resolve: {
-    extensions: ['.js', '.jsx'],
-  },
-  devServer: {
-    port: 9000,
   },
   module: {
     rules: [
@@ -39,12 +31,9 @@ module.exports = {
       },
       {
         test: /\.png$/,
-        loader: 'url-loader',
-
-      },
-      {
-        test: /\.svg$/,
-        loader: 'url-loader',
+        use: [
+          'file-loader',
+        ],
       },
     ],
   },
