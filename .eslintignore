@@ -1,3 +1,8 @@
 dist
 coverage
 docs
+webpack.common.js
+webpack.dev.js
+webpack.prod.js
+/src/js/*.js
+__e2e__
